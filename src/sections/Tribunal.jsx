@@ -4,14 +4,14 @@ import {
   FolderKanban, Youtube, FileSignature, ExternalLink 
 } from 'lucide-react';
 
-// --- COMPONENTES HIJOS (DEFINIDOS INTERNAMENTE PARA ESTA SECCIÓN) ---
+// --- COMPONENTES HIJOS INTEGRADOS ---
 
 const CodigoNormativo = () => (
   <div className="animate-fade-in space-y-10 max-w-5xl mx-auto">
     <h1 className="text-4xl md:text-5xl font-serif font-bold text-[#d4a017] uppercase tracking-widest text-center">Código Normativo Estudiantil</h1>
     <div className="space-y-8 text-lg font-light leading-relaxed text-justify">
       <h2 className="text-2xl font-serif font-bold text-[#d4a017]">Cimentando la Soberanía Jurídica</h2>
-      <p>Este cuerpo normativo de autoría propia es la constitución de un Estado de Derecho dentro del aula. Al establecer procesos reales como la caducidad y la prescripción, transformo el salón en un juzgado vivo donde la jerarquía del "porque yo lo digo" se rompe.</p>
+      <p>Este cuerpo normativo de autoría propia es la constitución de un State de Derecho dentro del aula. Al establecer procesos reales como la caducidad y la prescripción, transformo el salón en un juzgado vivo donde la jerarquía del "porque yo lo digo" se rompe.</p>
       <p>Es una herramienta de soberanía intelectual que exige el uso de tecnicismos y fundamentación bajo la legislación vigente, elevando lo académico a un nivel de ejercicio profesional constante.</p>
     </div>
     <div className="text-center pt-10">
@@ -94,7 +94,7 @@ const PraxisSecretarial = () => (
   </div>
 );
 
-// --- COMPONENTE PRINCIPAL TRIBUNAL ---
+// --- COMPONENTE PRINCIPAL ---
 
 export default function Tribunal({ subTab, setSubTab }) {
   const renderSubContent = () => {
@@ -113,7 +113,6 @@ export default function Tribunal({ subTab, setSubTab }) {
     <div className="animate-fade-in">
       {!subTab ? (
         <div className="space-y-12">
-          {/* Cabecera Principal */}
           <div className="text-center space-y-6">
             <h2 className="text-4xl md:text-5xl font-serif font-bold uppercase tracking-tight text-[#d4a017]">
               Tribunal (Visión Práctica)
@@ -126,7 +125,6 @@ export default function Tribunal({ subTab, setSubTab }) {
             </p>
           </div>
 
-          {/* Grid de las 6 secciones */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-10">
             {[
               { id: 'codigo-normativo', label: 'Código Normativo', icon: <ShieldCheck />, desc: 'La constitución de un Estado de Derecho dentro del aula para fundamentar cada acto.' },
