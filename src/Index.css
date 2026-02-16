@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    /* Esto hace que el cambio entre secciones sea elegante y no brusco */
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply antialiased text-gray-100;
+    /* Aseguramos que el fondo sea el correcto desde el segundo cero */
+    background-color: #374151;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+/* Tipografía Serif para sus títulos de Licenciado y Catedrático */
+.font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Animación de entrada para que el contenido no "golpee" la vista */
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
