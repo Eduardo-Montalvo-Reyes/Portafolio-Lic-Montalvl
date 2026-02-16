@@ -1,6 +1,6 @@
 import React from 'react';
 import { 
-  ChevronLeft, Map as MapIcon, Smile, BookOpen, 
+  ChevronLeft, Map, Smile, BookOpen, 
   Activity, Target, ExternalLink 
 } from 'lucide-react';
 
@@ -122,7 +122,7 @@ export default function Bachillerato({ subTab, setSubTab }) {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-10">
             {[
-              { id: 'historia', label: 'HISTORIA', icon: <MapIcon />, desc: 'Diseño técnico-pedagógico de corte comparativo nacional y universal.' },
+              { id: 'historia', label: 'HISTORIA', icon: <Map />, desc: 'Diseño técnico-pedagógico de corte comparativo nacional y universal.' },
               { id: 'etica', label: 'ÉTICA', icon: <Smile />, desc: 'Centrado en la Teoría de la Calificación del Acto y la Phronesis aristotélica.' },
               { id: 'taller', label: 'TALLER DE REDACCIÓN', icon: <BookOpen />, desc: 'Basado en la Ingeniería del Pensamiento y gradación de objetividad.' },
               { id: 'actividades', label: 'ACTIVIDADES', icon: <Activity />, desc: 'Dilemas reales diseñados para aplicar el conocimiento día con día.' },
