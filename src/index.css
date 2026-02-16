@@ -1,39 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   html {
-    /* Esto hace que el cambio entre secciones sea elegante y no brusco */
+    /* Desplazamiento elegante entre secciones */
     scroll-behavior: smooth;
   }
   
   body {
     @apply antialiased text-gray-100;
-    /* Aseguramos que el fondo sea el correcto desde el segundo cero */
     background-color: #374151;
     margin: 0;
     padding: 0;
+    /* Optimización de renderizado de texto */
+    text-rendering: optimizeLegibility;
   }
 }
 
-/* Tipografía Serif para sus títulos de Licenciado y Catedrático */
+/* Tipografía Serif: Esencial para la imagen de autoridad del Licenciado */
 .font-serif {
   font-family: 'Playfair Display', serif;
 }
 
-/* Animación de entrada para que el contenido no "golpee" la vista */
+/* Animación de entrada: Suave y profesional */
 .animate-fade-in {
-  animation: fadeIn 0.8s ease-out forwards;
+  animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity;
 }
 
 @keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(15px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Mejora de la barra de desplazamiento para que no rompa la estética oscura */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #374151;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4a017;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b68a12;
 }
