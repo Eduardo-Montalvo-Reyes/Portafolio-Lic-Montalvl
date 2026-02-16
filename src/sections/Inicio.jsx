@@ -47,15 +47,15 @@ export default function Inicio({ setActiveTab }) {
       <div className="flex justify-center pt-10">
         <button 
           onClick={() => setActiveTab('filosofia')}
-          className="group relative px-16 py-8 bg-transparent border-2 border-[#d4a017] rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-[0_0_50px_rgba(212,160,23,0.4)] hover:scale-105"
+          className="group relative px-8 md:px-16 py-6 md:py-8 bg-transparent border-2 border-[#d4a017] rounded-2xl overflow-hidden transition-all duration-500 hover:shadow-[0_0_50px_rgba(212,160,23,0.4)] hover:scale-105"
         >
           {/* Efecto de Brillo Interno */}
           <div className="absolute inset-0 bg-[#d4a017] translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out"></div>
           
-          <span className="relative z-10 flex items-center gap-6 text-xl md:text-2xl font-black tracking-[0.3em] uppercase text-[#d4a017] group-hover:text-black transition-colors duration-500">
-            <Sparkles className="animate-pulse" size={28} /> 
+          <span className="relative z-10 flex items-center gap-4 md:gap-6 text-lg md:text-2xl font-black tracking-[0.2em] md:tracking-[0.3em] uppercase text-[#d4a017] group-hover:text-black transition-colors duration-500">
+            <Sparkles className="animate-pulse shrink-0" size={24} /> 
             MI FILOSOFÍA 
-            <ShieldCheck className="animate-pulse" size={28} />
+            <ShieldCheck className="animate-pulse shrink-0" size={24} />
           </span>
         </button>
       </div>
