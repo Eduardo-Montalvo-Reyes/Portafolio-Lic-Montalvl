@@ -4,7 +4,7 @@ import {
   Brain, FileText, Target, ExternalLink 
 } from 'lucide-react';
 
-// --- COMPONENTES HIJOS (DEFINIDOS INTERNAMENTE PARA ESTA SECCIÓN) ---
+// --- COMPONENTES HIJOS INTEGRADOS ---
 
 const ActualizacionTemario = () => (
   <div className="animate-fade-in space-y-10 max-w-5xl mx-auto">
@@ -92,7 +92,7 @@ const ProyectoFinal = () => (
     <div className="space-y-8 text-lg font-light leading-relaxed text-justify">
       <h2 className="text-2xl font-serif font-bold text-[#d4a017]">La Proyección del Temario a la Práctica</h2>
       <p>Buscamos la "Soberanía Intelectual". Mis proyectos obligan al estudiante a adoptar un "Modo Formal" de comunicación, reconociendo que su palabra tiene consecuencias legales y sociales. Es un estándar de excelencia que el mundo profesional demandará fuera del aula.</p>
-      <p>Aunque represente un esfuerzo extra de diseño y evaluación, es un compromiso ineludible con la calidad. Busco que cada joven egrese con una columna vertebral ética y mental sólida.</p>
+      <p>Aunque represente un esfuerzo extra de diseño y evaluación, es un compromiso ineludible con la calidad. Busco que cada joven egresa con una columna vertebral ética y mental sólida.</p>
     </div>
     <div className="text-center pt-10">
       <a href="https://drive.google.com/file/d/1gsMeGRcHXzWjRGahmQu15dWzqDzzRsQs/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-12 py-5 bg-[#d4a017] text-black font-black uppercase tracking-widest rounded-xl hover:scale-105 transition-all shadow-lg">
@@ -102,7 +102,7 @@ const ProyectoFinal = () => (
   </div>
 );
 
-// --- COMPONENTE PRINCIPAL INNOVACION ---
+// --- COMPONENTE PRINCIPAL ---
 
 export default function Innovacion({ subTab, setSubTab }) {
   const renderSubContent = () => {
@@ -121,7 +121,6 @@ export default function Innovacion({ subTab, setSubTab }) {
     <div className="animate-fade-in">
       {!subTab ? (
         <div className="space-y-12">
-          {/* Cabecera Principal */}
           <div className="text-center space-y-6">
             <h2 className="text-4xl md:text-5xl font-serif font-bold uppercase tracking-tight" style={{ color: '#d4a017' }}>
               Innovando la Enseñanza
@@ -142,7 +141,6 @@ export default function Innovacion({ subTab, setSubTab }) {
             </p>
           </div>
 
-          {/* Grid de las 6 secciones */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-10">
             {[
               { id: 'actualizacion-temario', label: 'Actualización de Temario', icon: <RefreshCw />, desc: 'Robustecimiento de programas oficiales con doctrina contemporánea y casos de vanguardia.' },
