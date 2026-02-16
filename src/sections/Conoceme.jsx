@@ -43,13 +43,15 @@ export default function Conoceme() {
             </div>
           </div>
           
-          {/* El Botón del CV */}
-          <button 
-            onClick={() => window.open('/cv-eduardo-montalvo.pdf', '_self')}
-            className="group flex items-center gap-4 px-10 py-5 border-2 border-[#d4a017] text-[#d4a017] font-black uppercase tracking-[0.2em] rounded-xl hover:bg-[#d4a017] hover:text-black transition-all duration-500 shadow-lg"
+          {/* El Botón del CV - Ajustado para apertura segura */}
+          <a 
+            href="/cv-eduardo-montalvo.pdf" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-4 px-10 py-5 border-2 border-[#d4a017] text-[#d4a017] font-black uppercase tracking-[0.2em] rounded-xl hover:bg-[#d4a017] hover:text-black transition-all duration-500 shadow-lg"
           >
             <FileText size={24} /> VER CURRICULUM VITAE
-          </button>
+          </a>
         </div>
       </div>
     </div>
