@@ -76,7 +76,7 @@ export default function ApoyoJuridico() {
         <div className="space-y-8 order-1 lg:order-2">
           <div className="space-y-2">
             <h3 className="text-3xl md:text-4xl font-serif font-bold text-[#d4a017] uppercase tracking-tight">
-              Especialista en Procedimiento
+              Especialista en Procedimiento Jurídico
             </h3>
             <p className="text-gray-400 font-light text-lg italic">
               Estrategia jurídica de vanguardia en:
