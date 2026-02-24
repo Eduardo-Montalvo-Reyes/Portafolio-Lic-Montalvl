@@ -50,7 +50,7 @@ export default function Inicio({ setActiveTab }) {
           </div>
           
           <p className="text-lg md:text-xl font-serif italic leading-relaxed text-white text-justify font-light">
-            "Convencido de usar la tecnología y la Inteligencia Artificial de manera consciente y ética, enseño su uso como un apoyo extra para perfeccionar el trabajo humano, jamás como un reemplazo de nuestra esencia y sensibilidad."
+            "Entiendo la docencia como una extensión de la justicia: formar ciudadanos que no solo posean el saber técnico, sino el criterio para aplicarlo con ética. Mi compromiso es con la excelencia académica y la formación integral, utilizando la tecnología como un puente y nunca como un reemplazo del juicio humano."
           </p>
         </div>
       </div>
