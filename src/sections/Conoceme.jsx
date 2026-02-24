@@ -9,12 +9,12 @@ export default function Conoceme() {
       </h2>
 
       <div className="flex flex-col md:flex-row gap-12 items-center">
-        {/* Espacio para su Fotografía */}
+        {/* Espacio para su Fotografía - Ajustado a su formato .jpeg */}
         <div className="w-full md:w-1/3">
           <div className="relative aspect-square rounded-3xl overflow-hidden border-2 border-[#d4a017] shadow-2xl group">
             <img 
-              src="/foto-perfil.jpg" 
-              alt="Lic. Eduardo Montalvo" 
+              src="./Perfil.jpeg" 
+              alt="Lic. Eduardo Montalvo Reyes" 
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" 
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#1e293b] to-transparent opacity-40"></div>
