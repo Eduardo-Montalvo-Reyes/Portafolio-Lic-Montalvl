@@ -16,18 +16,19 @@ export default function App() {
   const [subTab, setSubTab] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // Efecto para volver al inicio del scroll al cambiar de sección
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [activeTab, subTab]);
 
+  // Paleta de Colores Institucional
   const colors = {
-    bg: '#374151',
-    accent: '#d4a017',
-    text: '#f9fafb',
+    bg: '#000000',      // Fondo Negro Sólido
+    accent: '#5F7906',  // Verde Base
+    text: '#FFFFFF',    // Texto Blanco
+    podium: 'linear-gradient(to right, #7B7474, #000000, #7B7474)',
+    textGradient: 'linear-gradient(to right, #5F7906, #FFFFFF, #5F7906)'
   };
 
-  // Menú de navegación principal (Excluye Filosofía por diseño)
   const menuItems = [
     { id: 'inicio', label: 'INICIO' },
     { id: 'conoceme', label: 'CONÓCEME' },
@@ -53,11 +54,22 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen font-sans selection:bg-[#d4a017] selection:text-black" style={{ backgroundColor: colors.bg, color: colors.text }}>
-      <nav className="sticky top-0 z-50 backdrop-blur-md border-b border-gray-600" style={{ backgroundColor: 'rgba(55, 65, 81, 0.9)' }}>
+    <div className="min-h-screen font-sans selection:bg-[#5F7906] selection:text-white" style={{ backgroundColor: colors.bg, color: colors.text }}>
+      
+      {/* NAVEGACIÓN: EL PODIUM DIFUMINADO */}
+      <nav className="sticky top-0 z-50 border-b-2 border-[#5F7906]" style={{ background: colors.podium }}>
         <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+          
+          {/* Identidad en el Podium */}
           <div className="flex flex-col cursor-pointer" onClick={() => { setActiveTab('inicio'); setSubTab(null); }}>
-            <h1 className="text-xl md:text-3xl font-serif font-bold tracking-tight uppercase leading-none" style={{ color: colors.accent }}>
+            <h1 
+              className="text-xl md:text-3xl font-serif font-bold tracking-tight uppercase leading-none"
+              style={{ 
+                background: colors.textGradient,
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent'
+              }}
+            >
               LIC. MONTALVO REYES
             </h1>
             <span className="text-[10px] md:text-xs uppercase tracking-[0.4em] text-white opacity-90 mt-1">
@@ -65,13 +77,13 @@ export default function App() {
             </span>
           </div>
 
-          {/* Menú Desktop */}
+          {/* Menú Desktop con Marco Blanco al Activar */}
           <div className="hidden lg:flex space-x-1">
             {menuItems.map(item => (
               <button
                 key={item.id}
                 onClick={() => { setActiveTab(item.id); setSubTab(null); setMenuOpen(false); }}
-                className={`uppercase text-[11px] tracking-widest font-bold px-4 py-2 rounded-lg transition-all duration-300 ${activeTab === item.id ? 'bg-[#d4a017] text-black shadow-lg' : 'text-gray-300 hover:text-[#d4a017]'}`}
+                className={`uppercase text-[11px] tracking-widest font-bold px-4 py-2 rounded-lg transition-all duration-300 border ${activeTab === item.id ? 'border-white bg-[#5F7906] text-white shadow-lg' : 'border-transparent text-gray-300 hover:text-white'}`}
               >
                 {item.label}
               </button>
@@ -79,19 +91,19 @@ export default function App() {
           </div>
 
           {/* Botón Hamburguesa Móvil */}
-          <button className="lg:hidden text-[#d4a017]" onClick={() => setMenuOpen(!menuOpen)}>
+          <button className="lg:hidden text-white" onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? <X size={28} /> : <Menu size={28} />}
           </button>
         </div>
 
         {/* Menú Móvil */}
         {menuOpen && (
-          <div className="lg:hidden bg-[#374151] border-b border-gray-600 p-6 flex flex-col space-y-4 shadow-2xl animate-fade-in">
+          <div className="lg:hidden bg-black border-b border-[#5F7906] p-6 flex flex-col space-y-4 shadow-2xl animate-fade-in">
             {menuItems.map(item => (
               <button
                 key={item.id}
                 onClick={() => { setActiveTab(item.id); setSubTab(null); setMenuOpen(false); }}
-                className={`text-left text-sm font-bold tracking-widest uppercase py-2 ${activeTab === item.id ? 'text-[#d4a017]' : 'text-white'}`}
+                className={`text-left text-sm font-bold tracking-widest uppercase py-2 ${activeTab === item.id ? 'text-[#5F7906]' : 'text-white'}`}
               >
                 {item.label}
               </button>
@@ -106,9 +118,10 @@ export default function App() {
         </div>
       </main>
 
-      <footer className="mt-20 border-t border-gray-600 py-12 px-6 text-center">
-        <p className="text-[10px] tracking-[0.3em] uppercase opacity-60">
-          Lic. en Derecho, Maestrante en Derecho y Profesor | Todos los derechos reservados ©2026
+      {/* FOOTER CON LÍNEA VERDE DIVISORIA */}
+      <footer className="mt-20 border-t border-[#5F7906] py-12 px-6 text-center bg-black">
+        <p className="text-[10px] tracking-[0.3em] uppercase opacity-80 text-white">
+          Licenciado en Derecho, Maestrante en Derecho Laboral y Profesor | Todos los derechos reservados ©2026
         </p>
       </footer>
     </div>
